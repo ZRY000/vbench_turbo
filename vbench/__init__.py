@@ -153,6 +153,5 @@ class VBench(object):
             results = evaluate_func(cur_full_info_path, self.device, submodules_list, **kwargs)
             results_dict[dimension] = results
         output_name = os.path.join(self.output_path, name+'_eval_results.json')
-        if get_rank() == 0:
-            save_json(results_dict, output_name)
-            print0(f'Evaluation results saved to {output_name}')
+        save_json(results_dict, output_name)
+        print0(f'Evaluation results saved to {output_name}')

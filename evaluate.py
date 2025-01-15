@@ -138,7 +138,7 @@ def main():
 
     my_VBench.evaluate(
         videos_path = args.videos_path,
-        name = f'results_{current_time}',
+        name = f'results_{args.dimension}',
         prompt_list=prompt, # pass in [] to read prompt from filename
         dimension_list = args.dimension,
         local=args.load_ckpt_from_local,
